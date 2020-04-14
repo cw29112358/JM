@@ -3,6 +3,7 @@ export const jobDemandForm = {
     {
       label: '标题',
       value: 'title',
+      required: true,
     },
     {
       label: '申请人',
@@ -15,6 +16,7 @@ export const jobDemandForm = {
     {
       label: '申请部门',
       value: 'department',
+      required: true,
     },
     {
       label: '申请日期',
@@ -24,14 +26,17 @@ export const jobDemandForm = {
     {
       label: '增补岗位名称',
       value: 'jobName',
+      required: true,
     },
     {
       label: '岗位序列',
       value: 'jobSequence',
+      required: true,
     },
     {
       label: '需求人数',
       value: 'demand',
+      required: true,
     },
     {
       label: '增补理由',
@@ -63,6 +68,7 @@ export const jobDemandForm = {
     {
       label: '工作地点',
       value: 'address',
+      required: true,
     },
     {
       label: '年龄下限',

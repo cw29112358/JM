@@ -27,7 +27,7 @@ export default {
       yield put({ type: 'startLoading' });
       const res = yield call(mesService.onLogin, payload);
       if (res && res.token) {
-        window.localStorage.setItem('authorization_token', res.token);
+        window.localStorage.setItem('Authorization', res.token);
         router.push('/JM/home');
       }
       yield put({ type: 'endLoading' });

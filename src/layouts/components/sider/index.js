@@ -1,12 +1,39 @@
 import React, { PureComponent } from 'react';
 import { router } from 'umi';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Icon } from 'antd';
 
-import { menu } from 'constants/layouts/sider';
-import { generateMenuMap } from 'utils/helper';
+import { menu } from '../../constants';
 import styles from './index.less';
 
 const { Sider } = Layout;
+const { SubMenu, Item } = Menu;
+
+const generateMenuMap = menu => {
+  return menu.map(item => {
+    if (item.children) {
+      return (
+        <SubMenu
+          key={item.path}
+          title={
+            <div>
+              {item.icon && <Icon type={item.icon} />}
+              <span>{item.title}</span>
+            </div>
+          }
+        >
+          {generateMenuMap(item.children)}
+        </SubMenu>
+      );
+    } else {
+      return (
+        <Item key={item.path}>
+          {item.icon && <Icon type={item.icon} />}
+          <span>{item.title}</span>
+        </Item>
+      );
+    }
+  });
+};
 
 export default class Side extends PureComponent {
   clickMenuItem = ({ key }) => router.push(key);

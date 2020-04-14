@@ -8,7 +8,7 @@ const { Header } = Layout;
 
 function onSetting({ key }) {
   if (key === '/login') {
-    localStorage.removeItem('authorization_token');
+    localStorage.removeItem('Authorization');
     router.replace(key);
   } else {
     router.push(key);
@@ -99,7 +99,7 @@ export default class Head extends PureComponent {
               beforeUpload={this.beforeUpload}
               onChange={this.handleChange}
               headers={{
-                authorization: window.localStorage.getItem('authorization_token'),
+                Authorization: 'Bearer ' + localStorage.getItem('Authorization'),
               }}
             >
               {imageUrl ? (

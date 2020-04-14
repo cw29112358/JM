@@ -3,8 +3,8 @@ import { Spin, Form, Input, Row, Col, Button, DatePicker } from 'antd';
 import { connect } from 'dva';
 import moment from 'moment';
 
-import { getJobDetailAction } from 'actions/recruitment/jobDemand';
-import { jobListMapping, jobStatusMapping } from 'constants/recruitment/jobDemand';
+import { getJobDetailAction } from '../../actions';
+import { jobListMapping, jobStatusMapping } from '../../constants/jobDemand';
 import styles from './index.less';
 
 const { Item } = Form;

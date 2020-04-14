@@ -3,7 +3,7 @@ import { request } from 'utils/request';
 export function getJobs(params) {
   return request({
     method: 'GET',
-    url: '/api/job/jobs',
+    url: '/api/job',
     params,
   });
 }
@@ -11,7 +11,7 @@ export function getJobs(params) {
 export function createJob(data) {
   return request({
     method: 'POST',
-    url: '/api/job/create',
+    url: '/api/job',
     data,
   });
 }
@@ -19,7 +19,7 @@ export function createJob(data) {
 export function getJobDetail(params) {
   return request({
     method: 'GET',
-    url: '/api/job/jobDetail',
+    url: '/api/job/detail',
     params,
   });
 }
@@ -27,7 +27,7 @@ export function getJobDetail(params) {
 export function deleteJob(data) {
   return request({
     method: 'DELETE',
-    url: '/api/job/deleteJob',
+    url: '/api/job',
     data,
   });
 }

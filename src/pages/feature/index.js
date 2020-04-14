@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { Alert } from 'antd';
 
-import LoginFrom from 'components/feature';
+import LoginFrom from './components/loginForm';
 import styles from './index.less';
 
 class Feature extends PureComponent {

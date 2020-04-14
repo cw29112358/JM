@@ -3,7 +3,7 @@ import { Form, Input, Icon, Button } from 'antd';
 import { connect } from 'dva';
 import { router } from 'umi';
 
-import { onLoginAction } from 'actions/feature';
+import { onLoginAction } from '../../actions';
 
 const LoginForm = memo(function(props) {
   const { form, onLogin, loading } = props;
@@ -29,7 +29,7 @@ const LoginForm = memo(function(props) {
   };
 
   useEffect(() => {
-    if (window.localStorage.getItem('authorization_token')) {
+    if (window.localStorage.getItem('Authorization')) {
       router.replace('/JM/home');
     }
   }, []);

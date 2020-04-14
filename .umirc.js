@@ -27,23 +27,6 @@ export default {
               path: './jobDemand',
               component: '../pages/recruitment/jobDemand',
             },
-            {
-              path: './talent',
-              routes: [
-                {
-                  path: './talentPool',
-                  component: '../pages/recruitment/talent/talentPool',
-                },
-                {
-                  path: './myFocus',
-                  component: '../pages/recruitment/talent/myFocus',
-                },
-                {
-                  path: './remind',
-                  component: '../pages/recruitment/talent/remind',
-                },
-              ],
-            },
           ],
         },
       ],
@@ -63,7 +46,7 @@ export default {
     components: path.resolve(__dirname, 'src/components'),
     utils: path.resolve(__dirname, 'src/utils'),
     constants: path.resolve(__dirname, 'src/utils/constants'),
-    actions: path.resolve(__dirname, 'src/utils/actions'),
+    actions: path.resolve(__dirname, 'src/pages/actions'),
   },
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html

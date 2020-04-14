@@ -10,7 +10,7 @@ const request = axios.create({
 
 request.interceptors.request.use(
   async config => {
-    config.headers.authorization = localStorage.getItem('authorization_token');
+    config.headers.Authorization = 'Bearer ' + localStorage.getItem('Authorization');
     return config;
   },
   error => Promise.reject(error),
@@ -31,7 +31,7 @@ request.interceptors.response.use(
         top: 58,
       });
 
-      localStorage.removeItem('authorization_token');
+      localStorage.removeItem('Authorization');
       router.replace('/login');
       return;
     }

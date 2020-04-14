@@ -72,7 +72,10 @@ function BasicInfo(props) {
                     <Col span={12} key={item.value}>
                       <Item label={item.label}>
                         {getFieldDecorator(item.value, {
-                          rules: item.rules && item.rules,
+                          rules: [
+                            { required: item.required, message: `请选择${item.label}` },
+                            ...(item.rules || []),
+                          ],
                         })(
                           <Select placeholder="请选择">
                             {item.options.map(option => (
@@ -90,7 +93,10 @@ function BasicInfo(props) {
                     <Col span={24} key={item.value}>
                       <Item label={item.label} {...formAllSpanLayout}>
                         {getFieldDecorator(item.value, {
-                          rules: item.rules && item.rules,
+                          rules: [
+                            { required: item.required, message: `${item.label}必填` },
+                            ...(item.rules || []),
+                          ],
                         })(
                           <TextArea
                             placeholder={`请填写${item.label}`}
@@ -132,7 +138,10 @@ function BasicInfo(props) {
                     <Col span={12} key={item.value}>
                       <Item label={item.label}>
                         {getFieldDecorator(item.value, {
-                          rules: item.rules && item.rules,
+                          rules: [
+                            { required: item.required, message: `${item.label}必填` },
+                            ...(item.rules || []),
+                          ],
                         })(<Input placeholder={`请填写${item.label}`} />)}
                       </Item>
                     </Col>

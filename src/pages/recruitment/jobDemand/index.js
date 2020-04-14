@@ -6,8 +6,8 @@ import { router } from 'umi';
 import Header from 'components/base/header';
 import JobTable from 'components/base/table';
 import Drawer from 'components/base/drawer';
-import { getJobsAction, createJobAction, deleteJobAction } from 'actions/recruitment/jobDemand';
-import { jobDemandForm, jobStatusMapping } from 'constants/recruitment/jobDemand';
+import { getJobsAction, createJobAction, deleteJobAction } from '../actions';
+import { jobDemandForm, jobStatusMapping } from '../constants/jobDemand';
 
 class JobDemand extends PureComponent {
   constructor(props) {
@@ -44,7 +44,7 @@ class JobDemand extends PureComponent {
         width: 100,
       },
       {
-        title: '发布部门',
+        title: '申请部门',
         dataIndex: 'department',
         key: 'department',
         width: 100,
