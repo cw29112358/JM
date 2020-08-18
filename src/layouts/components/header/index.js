@@ -39,10 +39,10 @@ const languageMenu = (
       CN
       <span className={styles.setting_menu_item}>简体中文</span>
     </Menu.Item>
-    {/* <Menu.Item>
+    <Menu.Item>
       US
       <span className={styles.setting_menu_item}>English</span>
-    </Menu.Item> */}
+    </Menu.Item>
   </Menu>
 );
 

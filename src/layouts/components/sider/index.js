@@ -46,7 +46,7 @@ export default class Side extends PureComponent {
           <a href="/" className={styles.link}>
             <img
               className={styles.logo}
-              src="https://preview.pro.ant.design/static/logo.f0355d39.svg"
+              src="http://127.0.0.1:3000/nginx.png"
               alt="logo"
             />
             <h1 className={styles.title} style={{ opacity: collapsed ? 0 : 1 }}>
